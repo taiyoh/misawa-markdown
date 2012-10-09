@@ -57,6 +57,7 @@ doc.getElementById('clear').addEventListener('click', function() {
 chrome.tabs.getSelected(null, function(tab) {  
 	if (tab.url.indexOf('http://jigokuno') == 0) {  
 		doc.querySelector('#url').value = tab.url;
+		get_url(tab.url);
 	}
 	else {  
 	    doc.querySelector('#url').value = 'http://jigokuno.com/';
